@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     </head>
     <body>
-        <div class="container-fluid banner">
+        <div class="container-fluid banner" style="background-color:#fffae7; height:120px;">
             <img src="assets/img/iut_bdx.png" class="img_iut">
             <img src="assets/img/logo.png" class="img_logo">
         </div>
