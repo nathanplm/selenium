@@ -1,1 +1,1 @@
-<?php require('accueil.php'); ?>
+<?php require('pages/accueil.php'); ?>
