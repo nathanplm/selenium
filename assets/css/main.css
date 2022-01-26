@@ -1,12 +1,43 @@
+.banner{
+    height: fit-content;
+}
+
 .img_iut{
     height: 100px;
-    width: 200px;
+    
 }
 
 .img_logo{
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    
 }
+
+.container_accueil{
+    padding-top: 30px;
+}
+
+.div_selenium{
+    background-color: #F5F5F5;
+}
+
+
+.div_selenium_ide{
+    /*background-color: #0233A0;*/
+    background-color: #F0FFFF;
+}
+
+.div_selenium_webdriver{
+    /*background-color: #CF0A2C;*/
+    background-color: #FFFAFA;
+
+}
+
+.div_selenium_grid{
+    /*background-color: #645D9C;*/
+    background-color: #F0F8FF;
+
+}
+
 
 h2{
     padding-top: 20px;
