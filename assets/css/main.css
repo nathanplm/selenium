@@ -1,17 +1,38 @@
+/* ========================= */
+/* GENERAL */
+h2,h4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+h5{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.img_article{
+    text-align: center;
+   
+}
+/* ========================= */
+
+
+/* ========================= */
+/* HEADER */
 .banner{
     height: fit-content;
 }
 
 .img_iut{
     height: 100px;
-    
 }
 
 .img_logo{
     height: 100px;
-    
 }
 
+/* ACCUEIL */
 .container_accueil{
     padding-top: 30px;
 }
@@ -37,13 +58,23 @@
     background-color: #F0F8FF;
 
 }
+/* ========================= */
 
 
-h2{
-    padding-top: 20px;
-    padding-bottom: 20px;
-
+/* ========================= */
+/* SELENIUM IDE */
+.img_selenium_ide{
+    height: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.img_selenium_ide_small{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* ========================= */
+
 
 
 
