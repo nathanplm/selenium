@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Selenium WebDriver</title>
+        <title>Selenium Grid</title>
         <!--<link rel="icon" type="image/png" href="/assets/img/logo.png" />-->
         <link rel="stylesheet" href="../assets/css/main.css">
         <!-- Bootstrap -->
@@ -50,23 +50,35 @@
 
         <!--   =========================================   -->
 
-        <div class="div_selenium_webdriver"></div>
+        <div class="div_selenium_grid"></div>
             <div class="container container-fluid">
 
-                <img src="../assets/img/logo_selenium_webdriver.png" class="img_logo">
-                <h2>Selenium WebDriver</h2>
+                <img src="../assets/img/logo_selenium_grid.png" class="img_logo">
+                <h2>Selenium Grid</h2>
 
                 <h4>Description :</h4>
                 <p>
-                    Selenium WebDriver est une API compacte orientée object qui est conçue comme une interdace de programmation simplifiée.
+                    Selenium Grid permet d'exécuter des scripts WebDriver sur des machines distantes en routant les commandes envoyées par le client vers des instances de navigateur distantes. En fait,
+                    cela permet d'exécuter de manière simple des tests en parallèle sur plusieurs machine. 
                 </p>
                 <p>
-                    Cela permet notamment de "piloter" un navigateur de manière native comme le ferait un utilisateur classique, soit localement, soit sur une machine distante utilisant le serveur
-                    Selenium.
+                    Selenium Grid permet également de gérer différentes versions et configurations d'un navigateur de manière centralisée, ce qui évite de devoir gérer chaque test de manière individuelle.
                 </p>
                 <p>
-                    Selenium WebDriver fait référence à la fois aux différents langages de programmation mais également aux implémentations du code de contrôle du navigateur utilisé.
+                    Cependant, Selenium Grid possède des limites ce qui pourrait l'amener à ne pas pouvoir répondre à certains besoins spécifiques
+                    comme par exemple la gestion de l'infrastructure. 
                 </p>
+                <p>
+                    Néanmoins, voici quelques unes de ses principales fonctionnalités :
+                </p>
+                <ul>
+                    <li>Point d'entrée central pour tous les tests</li>
+                    <li>Gestion et contrôle des nœuds / environnement où les navigateurs s'exécutent</li>
+                    <li>Mise à l'échelle</li>
+                    <li>Exécution de tests en parallèle</li>
+                    <li>Tests multiplateformes</li>
+                    <li>Equilibrage de charge</li>
+                </ul>
                 <br><br>
 
                 <h4>Comment l'utiliser ?</h4>
@@ -109,7 +121,7 @@
                     avec celui-ci, notamment en l'ouvrant ou en le fermant.
                 </p>
 
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_navigateur.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_navigateur.png" class="img_selenium_webDriver_small">
 
                 <p>
                     Le cas ci-dessus utilise le navigateur Chrome et le langage de programmation Java.
@@ -123,14 +135,14 @@
                 <p>
                     A l'aide du code ci-dessous, il est possible de naviguer jusqu'à une page web spécifique.
                 </p>
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_url.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_url.png" class="img_selenium_webDriver_small">
 
                 <h5>Demander des informations sur le navigateur</h5>
                 <p>
                     Avec Selenium, il est possible de récupérer plusieurs informations sur le navigateur comme la taille
                     de la fenêtre, sa position, les cookies ou le titre du site.
                 </p>
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_info_nav.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_info_nav.png" class="img_selenium_webDriver_small">
 
                 <h5>Etablir des stratégies d'attente</h5>
                 <p>
@@ -140,14 +152,14 @@
                     En fait, vous pouvez mettre en place des stratégies afin de vous assurer que l'élément se trouve 
                     sur la page avant d'essayer de le localiser et que l'élément est dans un état interactif avant d'essayer d'interagir avec lui par exemple.
                 </p>
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_attente.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_attente.png" class="img_selenium_webDriver_small">
 
 
                 <h5>Trouver un élément</h5>
                 <p>
                     Il est possible de trouver un élèment sur la page grâce à plusieurs "localisateurs" comme l'id, le name ou autre.
                 </p>
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_trouver.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_trouver.png" class="img_selenium_webDriver_small">
 
                 <h5>Agir sur un élément</h5>
                 <p>
@@ -162,14 +174,14 @@
                     </ul>
                 </p>
                 
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_agir.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_agir.png" class="img_selenium_webDriver_small">
 
 
                 <h5>Demander des informations sur un élément</h5>
                 <p>
                     Il est également possible de récupérer la valeur d'un élèment.
                 </p>
-                <img src="../assets/img/selenium_webdriver/demo_selenium_web_demander.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/demo_selenium_web_demander.png" class="img_selenium_webDriver_small">
                 
                 <br><br>
                 <p>
