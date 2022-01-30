@@ -71,12 +71,29 @@
 
                 <h4>Comment l'utiliser ?</h4>
                 <p>
-
+                    Le framework Selenium relie tous ces éléments via une interface utilisateur qui permet aux différents 
+                    backends de navigateur d'être utilisés de manière transparente, permettant une automatisation 
+                    multi-navigateurs et multi-plateformes.
                 </p>
+                <p>
+                    La configuration de Selenium est assez différente de la configuration d'autres outils commerciaux. 
+                </p>
+                
                 <br><br>
 
                 <h4>Pré-requis :</h4>
+
                 <p>
+                    Avant de pouvoir commencer à écrire du code Selenium, vous devez installer les bibliothèques de liaisons de 
+                    langue pour la langue de votre choix, le navigateur que vous souhaitez utiliser et le pilote de ce navigateur.
+                </p>
+                <p>
+                    En résumé, avant d'utiliser Selenium WebDriver, vous devez :
+                    <ul>
+                        <li>Installer une bibliothèque Selenium</li>
+                        <li>Installer les pilotes du navigateur</li>
+                        <li>Utiliser le code Selenium pour ouvrir ou fermer un navigateur et interragir avec</li>
+                    </ul>
 
                 </p>
 
@@ -86,86 +103,79 @@
 
                 <h4>Son fonctionnement :</h4>
 
+                <h5>Ouvrir / Fermer un navigateur</h5>
+                <p>
+                    Un fois que vous avez choisi le navigateur que vous allez utiliser, vous avez la posibilité d'interragir
+                    avec celui-ci, notamment en l'ouvrant ou en le fermant.
+                </p>
+
+                <img src="../assets/img/demo_selenium_web_navigateur.png" class="img_selenium_webDriver_small">
+
+                <p>
+                    Le cas ci-dessus utilise le navigateur Chrome et le langage de programmation Java.
+                </p>
+                <p>
+                    Consulter le <a href="https://www.selenium.dev/documentation/webdriver/getting_started/open_browser/">site officiel</a> 
+                    si vous voulez avoir le code pour utiliser d'autres langages ou navigateurs.
+                </p>
+
+                <h5>Naviguer sur une page web</h5>
+                <p>
+                    A l'aide du code ci-dessous, il est possible de naviguer jusqu'à une page web spécifique.
+                </p>
+                <img src="../assets/img/demo_selenium_web_url.png" class="img_selenium_webDriver_small">
+
+                <h5>Demander des informations sur le navigateur</h5>
+                <p>
+                    Avec Selenium, il est possible de récupérer plusieurs informations sur le navigateur comme la taille
+                    de la fenêtre, sa position, les cookies ou le titre du site.
+                </p>
+                <img src="../assets/img/demo_selenium_web_info_nav.png" class="img_selenium_webDriver_small">
+
+                <h5>Etablir des stratégies d'attente</h5>
+                <p>
+                    Selenium permet de répondre à un gros défi qui est la synchronisation du code avec l'état actuel du navigateur.
+                </p>
+                <p>
+                    En fait, vous pouvez mettre en place des stratégies afin de vous assurer que l'élément se trouve 
+                    sur la page avant d'essayer de le localiser et que l'élément est dans un état interactif avant d'essayer d'interagir avec lui par exemple.
+                </p>
+                <img src="../assets/img/demo_selenium_web_attente.png" class="img_selenium_webDriver_small">
+
+
+                <h5>Trouver un élément</h5>
+                <p>
+                    Il est possible de trouver un élèment sur la page grâce à plusieurs "localisateurs" comme l'id, le name ou autre.
+                </p>
+                <img src="../assets/img/demo_selenium_web_trouver.png" class="img_selenium_webDriver_small">
+
+                <h5>Agir sur un élément</h5>
+                <p>
+                    Vous avez la possibilité d'agir sur un élèment. Il existe seulement 5 commandes basiques qui peuvent être
+                    utilisées sur un élèment :
+                    <ul>
+                        <li><strong>click</strong> : pour cliquer sur un élèment</li>
+                        <li><strong>send keys</strong> : pour ajouter du texte à un champs ou à un élèment éditable</li>
+                        <li><strong>clear</strong> : pour vider un champs ou un élèment éditable</li>
+                        <li><strong>submit</strong> : seulement applicable pour un formulaire</li>
+                        <li><strong>select</strong> : pour sélectionner un élèment en particulier</li>
+                    </ul>
+                </p>
                 
-                <h5>Tests résilients</h5>
+                <img src="../assets/img/demo_selenium_web_agir.png" class="img_selenium_webDriver_small">
+
+
+                <h5>Demander des informations sur un élément</h5>
                 <p>
-                    Lorsqu'il est lancé, Selenium IDE permet d'enregistrer plusieurs "localisateurs" pour chaque élèment de la page avec lequel il interagit.
+                    Il est également possible de récupérer la valeur d'un élèment.
                 </p>
-
-                <div class="img_article">
-                    <img src="../assets/img/demo-selenium_ide_locator.png" class="img_selenium_ide">
-                </div>
+                <img src="../assets/img/demo_selenium_web_demander.png" class="img_selenium_webDriver_small">
+                
+                <br><br>
                 <p>
-                    Comme visible sur l'image ci-dessus, chaque élèment de la page est "localisable" de par son attribut "target" qu'il est possible de définir vous même ou en utilisant l'inspecteur du
-                    navigateur.
+                    Selenium WebDriver permet évidemment de faire beaucoup plus de choses. <br>
+                    N'hésitez donc pas à consulter le site officiel pour plus d'informations.
                 </p>
-
-
-                <h5>Enregistrement de l'écran</h5>
-                <p>
-                    En cliquant sur le bouton "REC", il est possible d'enregistrer son écran, c'est-à-dire que Selenium IDE se mettra à créer un nouveau script de test et le mettra à jour à chaque action
-                    que vous entreprendrez sur la page, le site, ou l'application sur laquelle vous vous trouvez.
-                </p>
-
-                <div class="img_article">
-                    <img src="../assets/img/demo_selenium_ide_rec.png" class="img_selenium_ide">
-                </div>
-                <p>
-                    Après avoir défini l'URL de départ, vous serez dirigé vers cette URL et vous pourrez voir un message en bas de votre écran vous indiquant que Selenium IDE est en train d'enregistrer ce 
-                    que vous faites.
-                </p>
-                <div class="img_article">
-                    <img src="../assets/img/demo_selenium_ide_rec_2.png" class="img_selenium_ide_small">
-                </div>
-                <p>
-                    Une fois l'enregistrement coupé, vous aurez à votre disposition toutes les étapes retraçant tout ce que 
-                    vous aurez fait sur la page ou l'application, et la possibilité d'exploiter ces données.
-                </p>
-
-
-                <h5>Réutilisation des tests</h5>
-                <p>
-                    Grâce à la commande "Run" il est possible de lancer l'exécution d'un script de tests où même de réutiliser un cas de test précis à l'intérieur d'un autre (par exemple en utilisant uen logique
-                    de connexion à plusieurs endroits dans une suite logique).
-                </p>
-
-                <div class="img_article">
-                    <img src="../assets/img/demo_selenium_ide_run.png" class="img_selenium_ide">
-                </div>
-                <p>
-                    Il est possible d'exécuter le script de tests à tout moment en appuyant sur les boutons "Run" comme montré ci-dessus ou en utilisant directement la commande "run".
-                </p>
-
-
-                <h5>Flux de contrôle</h5>
-                <p>
-                    Il est également possible d'utiliser le "Control Flow" ou Flux de contrôle fourni par Selenium IDE pour réaliser des schémas ou suites de tests en utilisant notamment la multitude
-                    de commandes disponibles comme if, while ou times.
-                </p>
-
-                <div class="img_article">
-                    <img src="../assets/img/demo_selenium_ide_controlflow.png" class="img_selenium_ide">
-                </div>
-                <p>
-                    Il est donc possible d'ajouter de la logique conditionnelle ou des boucles sur les différents tests afin par exemple d'exécuter certaines commandes uniquement quand certaines conditions 
-                    de votre application sont remplies ou au de réitérer certaines commandes à plusieurs reprises en fonction de critères définis.
-                </p>
-
-
-                <h5>Exportation de code</h5>
-                <p>
-                    Enfin, il vous est possible d'exporter un test ou une suite de tests. Pour cela, il vous suffit de faire un clic droit sur
-                    un test et de choisir dans quel langage vous voulez l'exporter.
-                </p>
-
-                <div class="img_article">
-                    <img src="../assets/img/demo_selenium_ide_export.png" class="img_selenium_ide">
-                </div>
-                <p>
-                    Cela peut vous permettre d'exploiter encore plus ces scripts de tests et de pouvoir si besoin les intégrer à un projet externe.
-                </p>
-
-
             </div>
         </div>
 
