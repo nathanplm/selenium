@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Selenium IDE</title>
+        <!--<link rel="icon" type="image/png" href="/assets/img/logo.png" />-->
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    </head>
+    
+    <div class="container-fluid banner">
+        <img src="../assets/img/logo_selenium.png" class="img_logo">
+        <img src="../assets/img/iut_bdx.png" class="img_iut" style="float:right;">
+    </div>
+
+    <nav class="navbar navbar-expand-xl navbar-light" style="margin-bottom:30px; background-color:#00B500;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white;font-size:18px;" href="../index.html">Accueil</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:white;font-size:18px;" href="../pages/selenium_composants.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Composants
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="../pages/selenium_ide.html">Selenium IDE</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="../pages/selenium_webdriver.html">Selenium WebDriver</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="../pages/selenium_grid.html">Selenium Grid</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white;font-size:18px;" href="../pages/comparatif.html">Comparatif</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white;font-size:18px;" href="">Utilisation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        <!--   =========================================   -->
+
+        
+        <div class="container container-fluid">
+
+            <h3>Comparatif avec des concurrents</h3>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">Caractéristiques</th>
+                    <th scope="col">IBM Rational Functional Tester</th>
+                    <th scope="col">HP QuickTest Professional</th>
+                    <th scope="col">Selenium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">Licence</th>
+                    <td>Requis</td>
+                    <td>Requis</td>
+                    <td>Open Source</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Prix</th>
+                    <td>Payant</td>
+                    <td>Payant</td>
+                    <td>Gratuit (Outil Open Source)</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Support Client</th>
+                    <td>Support dédié d'IBM</td>
+                    <td>Assistance dédiée de HP</td>
+                    <td>Communauté Open Source</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Compétences en rédaction de code</th>
+                    <td>Nécessaire</td>
+                    <td>Pas nécessaire</td>
+                    <td>Nécessaire</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Environnements pris en charge</th>
+                    <td>Windows</td>
+                    <td>Windows</td>
+                    <td>Windows, Linux, Mac, Solaris OS X</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Langues prises en charge</th>
+                    <td>C # et Java</td>
+                    <td>VBScript</td>
+                    <td>Java, C #, PHP, Ruby, Python, Perl et JavaScript</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h3>Avantages</h3>
+                <p>
+                    Comme on peut le remarquer dans le tableau comparatif ci-dessus, Selenium comporte plusieurs avantages.
+                </p>
+                <p>
+                    En effet, il est gratuit et ne nécessite aucune licence. De plus, étant un outil Open Source, il possède une communauté avec plusieurs
+                    personnes suceptibles de répondre à vos questions et il est très probable que si vous rencontrez un problème, il y a déjà au moins une personne
+                    qui a déjà rencontré le même cas de figure.
+                </p>
+                <p>
+                    Selenium prends également en charge plusieurs environnements tels que Windows, Linux ou Mac, ainsi qu'un grand nombre de langages de programmation
+                    comme Java, C #, PHP, Ruby, Python, Perl ou encore JavaScript.
+                </p>
+                <p>
+                    A noter que les outils comme TestNG et Junit peuvent être intégrés à Selenium pour générer les rapports et gérer les cas de test.
+                </p>
+                <p>
+                    Enfin Maven, Jenkins & Docker peuvent également être intégrés à Selenium pour effectuer des tests en continu.
+                </p>
+
+                <h3>Inconvéniens</h3>
+                <p>
+                    Malgré tous les avantages cités précédemment, Selenium est loin d'être parfait.
+                </p>
+                <p>
+                    Tout d'abord vous ne pouvez utiliser Selenium que pour tester les applications Web et non les applications de bureau ou tout autre logiciel.
+                </p>
+                <p>
+                    Un autre point cité dans les avantages qui peut aussi se révéler être un inconvénient est la question du support technique et produit. En effet, il n'y en a pas. <br>
+                    Les utilisateurs doivent se contenter de la communauté.
+                </p>
+                <p>
+                    Sélénium n'est pas équipé de la fonction de génération de rapports native, mais si cela est nécessaire, vous pouvez intégrer le Selenium avec TestNG ou JUnit pour résoudre ce problème.
+                </p>
+                <p>
+                    Enfin, les domaines suivants font notamment partie des cas et des contenus de sites internet que vous ne pouvez
+                    pas tester ou enregistrer avec Selenium :
+                    <ul>
+                        <li>
+                            <strong>Captchas</strong> : les captchas sont une solution bien connue et largement répandue,
+                            développée pour protéger les sites internet contre les robots et les
+                            spams, qui empêche donc les processus automatisés à l’aide de Selenium.<br>
+                            Si vous êtes confronté à des captchas, vous devrez donc désactiver les
+                            tests de saisie pendant la phase de test ou le scraping ou les remplacer
+                            temporairement par un autre élément.
+                        </li><br>
+                        <li>
+                            <strong>Téléchargements de fichier</strong> : même s’il est possible de lancer le
+                            téléchargement de fichiers dans les instances Selenium en simulant le clic
+                            sur un lien correspondant, l’API n’affiche pas l’avancée du processus de
+                            téléchargement.
+                        </li><br>
+                        <li>
+                            <strong>Code de réponse HTTP</strong> : Selenium comporte certaines faiblesses dans le
+                            traitement des codes de statut HTTP. Si nécessaire, vous pouvez toutefois
+                            parer à ces inconvénients en ajoutant un proxy.
+                        </li><br>
+                        <li>
+                            <strong>Connexion à des services de prestataires tiers</strong> : 
+                            qu’il s’agisse de plates-formes de réseaux sociaux, de services sur le cloud ou d’un compte de
+                            messagerie, il n’est pas recommandé de procéder à une connexion auprès
+                            de prestataires tiers à l’aide d’une session Selenium. <br>
+                            En effet, les prestataires de tels services mettent à disposition leurs propres API à des
+                            fins de test et les tests ainsi réalisés sont très lourds.
+                        </li><br>
+                        <li>
+                            <strong>Test de performance</strong> : Selenium WebDrive ne convient pas à la réalisation de
+                            tests de performance à proprement parler car ce framework n’a simplement
+                            pas été conçu pour cela.
+                        </li><br>
+                    </ul>
+                </p>
+
+
+        </div>
+        
+        
+
+        <!--   =========================================   -->
+
+        <div class="footer">
+            <div class="container">
+            </div>
+        </div>
+
+        <!-- Library js for bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+</html>
+
