@@ -12,22 +12,22 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     </head>
     
-        <div class="container-fluid banner" style="background-color: #F5FFFA;">
+        <div class="container-fluid banner">
             <img src="../assets/img/logo_selenium.png" class="img_logo">
             <img src="../assets/img/iut_bdx.png" class="img_iut" style="float:right;">
         </div>
 
-        <nav class="navbar navbar-expand-xl navbar-light" style="margin-bottom:30px; background-color:#FFFAFA;">
+        <nav class="navbar navbar-expand-xl navbar-light" style="margin-bottom:30px; background-color:#00B500;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Accueil</a>
+                        <a class="nav-link" style="color:white;" href="../index.html">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="../pages/selenium_composants.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" style="color:white;" href="../pages/selenium_composants.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Composants
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,10 +39,10 @@
                         </div>
                       </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Comparatif</a>
+                        <a class="nav-link" style="color:white;" href="">Comparatif</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Utilisation</a>
+                        <a class="nav-link" style="color:white;" href="">Utilisation</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +50,7 @@
 
         <!--   =========================================   -->
 
-        <div class="div_selenium_grid"></div>
+        <div>
             <div class="container container-fluid">
 
                 <img src="../assets/img/logo_selenium_grid.png" class="img_logo">
@@ -71,6 +71,7 @@
                 <p>
                     Néanmoins, voici quelques unes de ses principales fonctionnalités :
                 </p>
+                
                 <ul>
                     <li>Point d'entrée central pour tous les tests</li>
                     <li>Gestion et contrôle des nœuds / environnement où les navigateurs s'exécutent</li>
@@ -81,14 +82,31 @@
                 </ul>
                 <br><br>
 
-                <h4>Comment l'utiliser ?</h4>
+                <h4>Pourquoi l'utiliser ?</h4>
                 <p>
-                    Le framework Selenium relie tous ces éléments via une interface utilisateur qui permet aux différents 
-                    backends de navigateur d'être utilisés de manière transparente, permettant une automatisation 
-                    multi-navigateurs et multi-plateformes.
+                    Principalement :
+                    <ul>
+                        <li>Pour exécuter vos tests sur plusieurs navigateurs, plusieurs versions de navigateur et des navigateurs fonctionnant sur différents 
+                            systèmes d'exploitation.</li>
+                        <li>Pour réduire le temps nécessaire à la suite de tests pour terminer une passe de test.</li>
+                    </ul>
                 </p>
+
                 <p>
-                    La configuration de Selenium est assez différente de la configuration d'autres outils commerciaux. 
+                    Grid est utilisé pour accélérer l'exécution d'une passe de test en utilisant plusieurs machines pour exécuter des tests en parallèle.   
+                    Par exemple, sur un grand nombre de test, il est possible de configurer Selenium Grid pour prendre ne charge plusieurs machines différentes
+                    afin de diviser le temps d'exécution des tests (plus rapide que d'exécuter toute la suite de tests de manière séquentielle sur une seule machine).
+                </p>
+
+                <p>
+                    Grid est également utilisé pour prendre en charge l'exécution de tests sur plusieurs environnements d'exécution, en particulier sur différents navigateurs en même temps.<br>
+                    Par exemple, une "grille" de machines virtuelles peut être configurée, chacune prenant en charge un navigateur différent que l'application à tester doit prendre en charge.<br>
+                    Lorsque la suite de tests est exécutée, Selenium-Grid reçoit chaque combinaison test-navigateur et attribue à chaque test une exécution sur le navigateur requis.
+                </p>
+
+                <p>
+                    Il est également possible d'de configurer une grille pour tester l'application sur différentes versions d'un même navigateur.
+                    Les "grilles" de Selenium sont donc très flexibles au niveau de la configuration.
                 </p>
                 
                 <br><br>
@@ -96,17 +114,13 @@
                 <h4>Pré-requis :</h4>
 
                 <p>
-                    Avant de pouvoir commencer à écrire du code Selenium, vous devez installer les bibliothèques de liaisons de 
-                    langue pour la langue de votre choix, le navigateur que vous souhaitez utiliser et le pilote de ce navigateur.
+                    Etant donné que Selenium Grid intervient au niveau de l'exécution des tests, avant de l'utiliser,
+                    il est nécessaire d'avoir des scripts Selenium à exécuter.
                 </p>
-                <p>
-                    En résumé, avant d'utiliser Selenium WebDriver, vous devez :
-                    <ul>
-                        <li>Installer une bibliothèque Selenium</li>
-                        <li>Installer les pilotes du navigateur</li>
-                        <li>Utiliser le code Selenium pour ouvrir ou fermer un navigateur et interragir avec</li>
-                    </ul>
 
+                <p>
+                    Cela peut être des scripts qui ont été réalisés via Selenium WebDriver ou des scripts qui ont été
+                    exportés de Selenium IDE par exemple.
                 </p>
 
                 <br><br>
@@ -115,79 +129,83 @@
 
                 <h4>Son fonctionnement :</h4>
 
-                <h5>Ouvrir / Fermer un navigateur</h5>
+                <h5>Standalone</h5>
                 <p>
-                    Un fois que vous avez choisi le navigateur que vous allez utiliser, vous avez la posibilité d'interragir
-                    avec celui-ci, notamment en l'ouvrant ou en le fermant.
-                </p>
-
-                <img src="../assets/img/demo_selenium_web_navigateur.png" class="img_selenium_webDriver_small">
-
-                <p>
-                    Le cas ci-dessus utilise le navigateur Chrome et le langage de programmation Java.
+                    Le mode Standalone est l'union de tous les composants de Selenium Grid. Une grille entièrement fonctionnelle est disponible après son démarrage en mode autonome.
                 </p>
                 <p>
-                    Consulter le <a href="https://www.selenium.dev/documentation/webdriver/getting_started/open_browser/">site officiel</a> 
-                    si vous voulez avoir le code pour utiliser d'autres langages ou navigateurs.
+                    Le mode autonome (Standalone) est également le mode le plus simple pour faire tourner une grille de sélénium. <br>
+                    Par défaut, le serveur écoutera sur http://localhost:4444, et c'est l'URL vers laquelle vous devez pointer vos tests RemoteWebDriver. <br>
+                    Le serveur détectera les pilotes disponibles qu'il peut utiliser à partir du système PATH
                 </p>
 
-                <h5>Naviguer sur une page web</h5>
+                <img src="../assets/img/selenium_grid/demo_selenium_grid_standalone.png" class="img_selenium_grid">
+                
+                <h5>Hub</h5>
                 <p>
-                    A l'aide du code ci-dessous, il est possible de naviguer jusqu'à une page web spécifique.
-                </p>
-                <img src="../assets/img/demo_selenium_web_url.png" class="img_selenium_webDriver_small">
-
-                <h5>Demander des informations sur le navigateur</h5>
-                <p>
-                    Avec Selenium, il est possible de récupérer plusieurs informations sur le navigateur comme la taille
-                    de la fenêtre, sa position, les cookies ou le titre du site.
-                </p>
-                <img src="../assets/img/demo_selenium_web_info_nav.png" class="img_selenium_webDriver_small">
-
-                <h5>Etablir des stratégies d'attente</h5>
-                <p>
-                    Selenium permet de répondre à un gros défi qui est la synchronisation du code avec l'état actuel du navigateur.
-                </p>
-                <p>
-                    En fait, vous pouvez mettre en place des stratégies afin de vous assurer que l'élément se trouve 
-                    sur la page avant d'essayer de le localiser et que l'élément est dans un état interactif avant d'essayer d'interagir avec lui par exemple.
-                </p>
-                <img src="../assets/img/demo_selenium_web_attente.png" class="img_selenium_webDriver_small">
-
-
-                <h5>Trouver un élément</h5>
-                <p>
-                    Il est possible de trouver un élèment sur la page grâce à plusieurs "localisateurs" comme l'id, le name ou autre.
-                </p>
-                <img src="../assets/img/demo_selenium_web_trouver.png" class="img_selenium_webDriver_small">
-
-                <h5>Agir sur un élément</h5>
-                <p>
-                    Vous avez la possibilité d'agir sur un élèment. Il existe seulement 5 commandes basiques qui peuvent être
-                    utilisées sur un élèment :
+                    Un Hub est la combinaison des composants suivants :
                     <ul>
-                        <li><strong>click</strong> : pour cliquer sur un élèment</li>
-                        <li><strong>send keys</strong> : pour ajouter du texte à un champs ou à un élèment éditable</li>
-                        <li><strong>clear</strong> : pour vider un champs ou un élèment éditable</li>
-                        <li><strong>submit</strong> : seulement applicable pour un formulaire</li>
-                        <li><strong>select</strong> : pour sélectionner un élèment en particulier</li>
+                        <li>Router</li>
+                        <li>Distributor</li>
+                        <li>Session Map</li>
+                        <li>New Session Queue</li>
+                        <li>Event Bus</li>
                     </ul>
                 </p>
-                
-                <img src="../assets/img/demo_selenium_web_agir.png" class="img_selenium_webDriver_small">
+                <img src="../assets/img/selenium_grid/demo_selenium_grid_components.png" class="img_selenium_grid">
+                <p>
+                    Pour en savoir plus sur les différents composants, n'hésitez pas à aller voir la <a href="https://www.selenium.dev/documentation/grid/components/">documentation officielle</a>.
+                </p>
+
+                <img src="../assets/img/selenium_grid/demo_selenium_grid_hub.png" class="img_selenium_grid">
+
+                <h5>Nodes (noeuds)</h5>
+
+                <p>
+                    Un ou plusieurs nœuds peuvent être démarrés dans cette configuration et le serveur détectera les pilotes disponibles qu'il peut utiliser à partir du système PATH.
+                </p>
+                <img src="../assets/img/selenium_grid/demo_selenium_grid_nodes.png" class="img_selenium_grid">
 
 
-                <h5>Demander des informations sur un élément</h5>
+                <h5>Distributed</h5>
                 <p>
-                    Il est également possible de récupérer la valeur d'un élèment.
+                    En mode Distributed chaque composant doit être démarré de son côté. Cette configuration est plus adaptée aux grandes grilles.
                 </p>
-                <img src="../assets/img/demo_selenium_web_demander.png" class="img_selenium_webDriver_small">
+                <p>
+                    L'ordre de démarrage n'est pas forcément important mais il est néanmoins conseillé de suivre ces étapes :
+                    <ol>
+                        <li>Event Bus : sert de chemin de communication vers d'autres composants de la grille dans les étapes suivantes.</li>
+                        <strong>java -jar selenium-server-<version>.jar  event-bus</strong><br><br>
+
+                        <li>Session Map : responsable du mappage des ID de session au noeud où la session est en cours d'exécution.</li>
+                        <strong>java -jar selenium-server-<version>.jar sessions</strong><br><br>
+
+                        <li>New Session Queue : ajoute la nouvelle demande de session à une file d'attente, puis le "Distributor" la traite.</li>
+                        <strong>java -jar selenium-server-<version>.jar sessionqueue</strong><br><br>
+
+                        <li>Distributor : les noeuds s'y enregistrent et attribuent un noeud pour une demande de session.</li>
+                        <strong>java -jar selenium-server-<version>.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false</strong><br><br>
+
+                        <li>Router : le point d'entrée de la grille, en charge de rediriger les requêtes vers le bon composant.</li>
+                        <strong>java -jar selenium-server-<version>.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559</strong><br><br>
+
+                        <li>Nodes</li>
+                        <strong>java -jar selenium-server-<version>.jar node </strong>
+                    </ol>
+                </p>
+
+                <h5>Faire des requêtes à la grille</h5>
+                <p>
+                    Après le démarrage d'une grille, il existe principalement deux façons d'interroger son statut, via l'interface utilisateur de la grille ou via un appel API.
+                </p>
+                <p>
+                    L'interface utilisateur de la grille est accessible en ouvrant le navigateur de votre choix et en vous rendant sur http://localhost:4444 .
+                </p>
+                <p>
+                    Les appels d'API peuvent être effectués via <strong>http://localhost:4444/status</strong> ou en utilisant GraphQL : <br>
+                    <strong>curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .</strong>
+                </p>
                 
-                <br><br>
-                <p>
-                    Selenium WebDriver permet évidemment de faire beaucoup plus de choses. <br>
-                    N'hésitez donc pas à consulter le site officiel pour plus d'informations.
-                </p>
             </div>
         </div>
 
